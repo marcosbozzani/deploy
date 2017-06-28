@@ -10,7 +10,8 @@ A self-contained program that packages and deploys files and allows scripts
 ## How to build
 1. Clone this repository
 2. Open a console on the repository root
-3. Run `build.cmd`
+3. Run `package.cmd`
+4. The program will be located at the `target` folder
 
 ## Commands
 - `deploy.exe --init` creates a new configuration file
