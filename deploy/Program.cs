@@ -15,8 +15,6 @@ namespace Deploy
             //args = new[] { "--help" };
             args = new[] { "--install" };
 #endif
-
-
             if (args.Length == 1 && args[0] == "--init")
             {
                 InitConfig.Create();
