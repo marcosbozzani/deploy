@@ -1,0 +1,17 @@
+{
+  "hostname": "10.10.10.11",
+  "username": "vagrant",
+  "privatekey": "~/.ssh/virtualbox",
+
+  "sourcepath": "target",
+  "uploadpath": "/tmp",
+  "clenauponexit": false,
+
+  "localshell": {
+    "beforepackage": "scripts/beforepackage.ps1"
+  },
+
+  "remoteshell": {
+    "afterupload": "scripts/afterupload.sh"
+  }
+}

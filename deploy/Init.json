@@ -1,0 +1,25 @@
+{
+    "hostname": "",
+    "port": "",
+    "username": "",
+    "privatekey": "",
+
+    "env": "",
+    "sourcepath": "",
+    "uploadpath": "/tmp",
+    "cleanuponexit": true,
+
+    "localshell": {
+        "beforepackage": "",
+        "afterpackage": "",
+        "beforeupload": "",
+        "afterupload": ""
+    },
+
+    "remoteshell": {
+        "beforepackage": "",
+        "afterpackage": "",
+        "beforeupload": "",
+        "afterupload": ""
+    }
+}
