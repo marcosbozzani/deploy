@@ -12,9 +12,19 @@ namespace Deploy
 #if DEBUG
             args = new[] { @"..\..\..\sample\deploy" };
 #endif
-            if (args.Length == 1 && args[0] == "init")
+            args = new[] { "--help"  };
+
+            if (args.Length == 1 && args[0] == "--init")
             {
                 InitConfig.Create();
+            }
+            else if (args.Length == 1 && args[0] == "--install")
+            {
+                Installer.Run();
+            }
+            else if (args.Length == 1 && args[0] == "--help")
+            {
+                Help();
             }
             else
             {
@@ -31,6 +41,16 @@ namespace Deploy
             Console.WriteLine("Done!");
 #endif
             Exit(0);
+        }
+
+        private static void Help()
+        {
+            Console.WriteLine("deploy.exe --init                    creates a new configuration file");
+            Console.WriteLine("deploy.exe --help                    displays the available commands");
+            Console.WriteLine("deploy.exe --install                 installs the command to the '%Path%'");
+            Console.WriteLine("deploy.exe {path-to-config-file}     runs the deployment");
+            Console.WriteLine();
+            Console.WriteLine("For more information access: http://cartman:3000/marcosbozzani/deploy/README.md");
         }
 
         public static void Exit(int code)

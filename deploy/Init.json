@@ -1,6 +1,6 @@
 {
     "hostname": "",
-    "port": "",
+    "port": 22,
     "username": "",
     "privatekey": "",
 
