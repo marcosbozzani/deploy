@@ -1,7 +1,7 @@
 @echo off
 setlocal enableextensions enabledelayedexpansion
 
-set install_dir=releases
+set install_dir=target
 set release_dir=deploy\bin\release
 set msbuild="%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe"
 
@@ -22,11 +22,9 @@ packages\ILMerge.2.14.1208\tools\ilmerge.exe ^
 
 for /f "tokens=*" %%x in ('cscript //nologo version.js deploy.exe') do set version=%%x
 
-set install_dir=%install_dir%\%version%
-
 if not exist "%install_dir%" mkdir %install_dir%
 
-echo Result: %install_dir%
+echo Result: %install_dir% (%version%)
 
 del deploy.pdb > nul
 move deploy.exe %install_dir% > nul
