@@ -10,9 +10,12 @@ namespace Deploy
         static void Main(string[] args)
         {
 #if DEBUG
-            args = new[] { @"..\..\..\sample\deploy" };
+            //args = new[] { @"..\..\..\sample\deploy" };
+            //args = new[] { "--init" };
+            //args = new[] { "--help" };
+            args = new[] { "--install" };
 #endif
-            args = new[] { "--help"  };
+
 
             if (args.Length == 1 && args[0] == "--init")
             {

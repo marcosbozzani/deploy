@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Deployer.cs" />
     <Compile Include="InitConfig.cs" />
+    <Compile Include="Installer.cs" />
     <Compile Include="LocalShell.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="PathUtility.cs" />
