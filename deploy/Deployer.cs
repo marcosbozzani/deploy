@@ -131,7 +131,7 @@ namespace Deploy
             {
                 if (path != null)
                 {
-                    remoteShell.ExecuteCommand("rm -rf " + path);
+                    remoteShell.ExecuteCommand("sudo rm -rf " + path);
                 }
             }
             catch { }

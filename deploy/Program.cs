@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Deploy
@@ -13,7 +15,8 @@ namespace Deploy
             //args = new[] { @"..\..\..\sample\deploy" };
             //args = new[] { "--init" };
             //args = new[] { "--help" };
-            args = new[] { "--install" };
+            //args = new[] { "--install" };
+            args = new[] { "--version" };
 #endif
             if (args.Length == 1 && args[0] == "--init")
             {
@@ -23,9 +26,13 @@ namespace Deploy
             {
                 Installer.Run();
             }
+            else if (args.Length == 1 && args[0] == "--version")
+            {
+                ShowVersion();
+            }
             else if (args.Length == 1 && args[0] == "--help")
             {
-                Help();
+                ShowHelp();
             }
             else
             {
@@ -44,9 +51,17 @@ namespace Deploy
             Exit(0);
         }
 
-        private static void Help()
+        private static void ShowVersion()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var version = FileVersionInfo.GetVersionInfo(assembly.Location).ProductVersion;
+            Console.WriteLine(version);
+        }
+
+        private static void ShowHelp()
         {
             Console.WriteLine("deploy.exe --init                    creates a new configuration file");
+            Console.WriteLine("deploy.exe --version                 displays the product version");
             Console.WriteLine("deploy.exe --help                    displays the available commands");
             Console.WriteLine("deploy.exe --install                 installs the command to the '%Path%'");
             Console.WriteLine("deploy.exe {path-to-config-file}     runs the deployment");
