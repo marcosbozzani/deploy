@@ -15,6 +15,7 @@ A self-contained program that packages and deploys files and allows scripts
 
 ## Commands
 - `deploy.exe --init` creates a new configuration file
+- `deploy.exe --version` displays the product version
 - `deploy.exe --help` displays the available commands
 - `deploy.exe --install` installs the command to the `%Path%`
 - `deploy.exe {path-to-config-file}` runs the deployment:
