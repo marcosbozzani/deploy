@@ -83,7 +83,7 @@ namespace Deploy
                 }
             }
 
-            Environment.Exit(1);
+            Environment.Exit(code);
         }
 
         public static void Error(string message, params object[] args)
