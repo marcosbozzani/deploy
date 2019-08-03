@@ -3,7 +3,7 @@ A self-contained program that packages and deploys files and allows scripts
  to run on local and remote nodes via SSH
 
 ## How to install
-1. Download the `deploy.exe` [latest version](http://cartman:3000/marcosbozzani/deploy/releases)
+1. Download the `deploy.exe` [latest version](/releases/latest)
 2. Move the file `deploy.exe` to the installation folder
 2. Run `deploy.exe --install`
 
