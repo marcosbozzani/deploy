@@ -27,7 +27,7 @@ A self-contained program that packages and deploys files and allows scripts
 The configuration file extension must be `.json`. All the paths in the configuration 
 file have common properties (see [Path properties](#path-properties)). The `env` property is set as an 
 environment variable for local (`%deploy_env%`) and remote (`$deploy_env`) events.
-```json
+```javascript
 {
     "hostname": "", // the SSH hostname (domain.com) or ip (192.168.0.1) [required]
     "port": 22, // the SSH port [default: 22]
