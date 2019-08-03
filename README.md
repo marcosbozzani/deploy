@@ -2,6 +2,9 @@
 A self-contained program that packages and deploys files and allows scripts
  to run on local and remote nodes via SSH
 
+## Requirements
+.NETFramework v4.5.2+ [Download](https://dotnet.microsoft.com/download/dotnet-framework)
+
 ## How to install
 1. Download the `deploy.exe` [latest version](https://github.com/marcosbozzani/deploy/releases/latest)
 2. Move the file `deploy.exe` to the installation folder
